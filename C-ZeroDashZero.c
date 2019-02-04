@@ -2,7 +2,7 @@
 
 int main()
 {
-    printf("Hello Bitoverflow");
+    printf("Hello BitOverflow");
 
     return 0;
 }
