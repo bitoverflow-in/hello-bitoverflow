@@ -1,7 +1,7 @@
-public class Bitoverflow
+public class BitOverflow
 {
 	public static void main (String[] args)
 	{
-	 System.out.println("Hello Bitoverflow");
+	 System.out.println("Hello BitOverflow");
 	}
 }
