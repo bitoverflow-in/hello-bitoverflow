@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello World</title>
+  
+   <style>
+   * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(245, 245, 245);
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    /* overflow: hidden; */
+}
+
+.content {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 500;
+    top: 50%;
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    font-family: Verdana, sans-serif;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 1s;
+    animation: bounce 2s infinite;
+    text-shadow: 0 8px 15px rgba(29, 29, 29, 0.666);
+}
+@keyframes bounce{
+     from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+    80%{
+        letter-spacing: 15px;
+    } 
+}
+.content:hover{
+    background: linear-gradient(45deg, rgb(0, 0, 255), rgb(255, 0, 0));
+    cursor: pointer;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content:hover+.copy {
+    color: rgb(76, 76, 76);
+}
+
+.copy {
+    position: fixed;
+    top: calc(100% - 40px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.window {
+    width: 900px;
+    height: 500px;
+    background: rgb(253, 253, 253);
+    border-radius: 5px 5px 4px 4px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    box-shadow: 1px 1px 15px rgba(83, 83, 83, 0.374);
+    transition: 2s linear ;
+}
+
+
+header {
+    background: rgb(230, 230, 230);
+    min-height: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+#close {
+    background: rgb(241, 113, 113);
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    top: 5px;
+    left: 5px;
+    position: fixed;
+}
+
+#close:hover {
+    background: red;
+    cursor: pointer;
+    border: rgb(241, 113, 113) 1px solid;
+}
+
+#min {
+    background: rgb(13, 255, 0);
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    top: 5px;
+    left: 35px;
+    position: fixed;
+}
+
+#min:hover {
+    background: rgb(1, 152, 36);
+    cursor: pointer;
+    border: rgb(13, 255, 0) 1px solid;
+}
+
+#max {
+    background: rgb(230, 255, 2);
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    top: 5px;
+    left: 65px;
+    position: fixed;
+}
+
+#max:hover {
+    background: rgb(224, 215, 86);
+    cursor: pointer;
+    border: rgb(230, 255, 2) 1px solid;
+}
+
+.title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: .9em;
+    position: fixed;
+    left: 50%;
+    top: 8px;
+    transform: translateX(-50%);
+}
+#love{
+    color: rgba(255, 0, 93, 0.972);
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    font-family: Verdana, sans-serif;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    animation: beat 1s infinite;
+}
+@keyframes beat{
+    
+    from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+</style>
+</head>
+
+<body>
+    <div class="window">
+        <header>
+            <div class="title">Hello World</div>
+            <div class="button">
+                <div id="close"></div>
+                <div id="min"></div>
+                <div id="max"></div>
+            </div>
+        </header>
+
+        <div class="content">
+            Hello BitOverflow
+        </div>
+        <div class="copy">made with<span id="love"> &#x2665;</span> by novacore</div>
+    </div>
+    <script src="main.js"></script>
+   
+</body>
+
+</html>
